@@ -114,6 +114,13 @@ function indexTooltip(){
   $('.sup-img').on('click', function(){
     $('.tooltip').toggleClass('tooltip--active');
   });
+
+  $(window).on('click', function(event){
+    if ($(event.target).hasClass('tooltip--active')|| $(event.target).hasClass('sup-img') || $(event.target).hasClass('text')){
+    }else{
+      $('.tooltip').removeClass('tooltip--active');
+    }
+  });
 }
 
 function infoScroll() {
@@ -245,7 +252,6 @@ function institSlider() {
 					const slideProgress = swiper.slides[i].progress;
 					const innerOffset = swiper.width * 0.5;
 					const innerTranslate = slideProgress * innerOffset;
-          console.log(innerTranslate);
 
 					swiper.slides[i].querySelector('.slide-bgimg').style.transform =
 						'translateX(' + innerTranslate + 'px)';
@@ -334,7 +340,6 @@ function performSlider() {
 					const slideProgress = swiper.slides[i].progress;
 					const innerOffset = swiper.width * 0.5;
 					const innerTranslate = slideProgress * innerOffset;
-          console.log(innerTranslate);
 
 					swiper.slides[i].querySelector('.slide-bgimg').style.transform =
 						'translateX(' + innerTranslate + 'px)';
