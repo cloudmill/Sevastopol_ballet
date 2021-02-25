@@ -212,12 +212,11 @@ function indexSlider() {
 					swiper.slides[i].style.transition = '';
 				}
 			},
-			setTransition: function () {
+			setTransition: function (speed) {
 				const swiper = this;
 				for (let i = 0; i < swiper.slides.length; i++) {
-					swiper.slides[i].style.transition = 1000 + 'ms';
-					swiper.slides[i].querySelector('.slide-bgimg').style.transition =
-						1000 + 'ms';
+					swiper.slides[i].style.transition = speed + 'ms';
+					swiper.slides[i].querySelector('.slide-bgimg').style.transition = speed + 'ms';
 				}
 			}
 		}
@@ -263,12 +262,11 @@ function institSlider() {
 					swiper.slides[i].style.transition = '';
 				}
 			},
-			setTransition: function () {
+			setTransition: function (speed) {
 				const swiper = this;
 				for (let i = 0; i < swiper.slides.length; i++) {
-					swiper.slides[i].style.transition = 1000 + 'ms';
-					swiper.slides[i].querySelector('.slide-bgimg').style.transition =
-						1000 + 'ms';
+					swiper.slides[i].style.transition = speed + 'ms';
+					swiper.slides[i].querySelector('.slide-bgimg').style.transition = speed + 'ms';
 				}
 			}
 		}
@@ -351,12 +349,11 @@ function performSlider() {
 					swiper.slides[i].style.transition = '';
 				}
 			},
-			setTransition: function () {
+			setTransition: function (speed) {
 				const swiper = this;
 				for (let i = 0; i < swiper.slides.length; i++) {
-					swiper.slides[i].style.transition = 1000 + 'ms';
-					swiper.slides[i].querySelector('.slide-bgimg').style.transition =
-						1000 + 'ms';
+					swiper.slides[i].style.transition = speed + 'ms';
+					swiper.slides[i].querySelector('.slide-bgimg').style.transition = speed + 'ms';
 				}
 			},
 		}
@@ -565,8 +562,8 @@ function configGallery() {
     }
 
     for (let i = 0; i < arrayWays.length; i++){
-      $('.modal').find('.top').append(`<div class="swiper-slide gallery-top-slide"> <div class="img-contein"> <img src="./images/${arrayWays[i]}"/> </div> <p class="text text--regal24-14">${description}</p> </div>`);
-      $('.modal').find('.bottom').append(`<div class="swiper-slide"> <div class="find"></div> <img src="./images/${arrayWays[i]}"/> </div>`);
+      $('.modal').find('.top').append(`<div class="swiper-slide gallery-top-slide"> <div class="img-contein"> <img src="${arrayWays[i]}"/> </div> <p class="text text--regal24-14">${description}</p> </div>`);
+      $('.modal').find('.bottom').append(`<div class="swiper-slide"> <div class="find"></div> <img src="${arrayWays[i]}"/> </div>`);
     }
   });
 

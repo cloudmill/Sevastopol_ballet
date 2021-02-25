@@ -159,6 +159,8 @@
       height: 100%;
       overflow: hidden;
       margin-right: 60px;
+      border-radius: 10px;
+      // transition: transform $ease-main;
       @media (max-width: 1280px) {
         margin-right: 40px;
       }
