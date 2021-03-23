@@ -908,6 +908,16 @@
   }
 
   &__gallery {
+    &-title {
+      @media (max-width: 768px) {
+        padding-left: 10px;
+      }
+    }
+    &-slide-title {
+      @media (min-width: 1280px) {
+        margin-top: 20px;
+      }
+    }
     margin-top: 181px;
     @media (max-width:1360px) {
       margin-top: 80px;

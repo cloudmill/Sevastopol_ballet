@@ -283,46 +283,23 @@ block content
     .content(data-aos='fade-up')
       .row.row--jc-sb
         .row.row--jc-c
-          .title.title--section Галерея
+          .title.title--section.index__gallery-title Галерея
         +slider-btn('gallery-prev', 'gallery-next')
     .index__gallery-conteiner
       .swiper-wrapper
-        .swiper-slide.index__gallery-slide.js--modal(data-way="gallery-prev.png;gallery-prev1.png;gallery-prev1.png", data-description="Осуждение Фауста",)
-          .row
-            .col--img
-              img(src="./images/gallery-slide.png", alt="")
-              .prev
+        each slide in [1, 2, 3]
+          .swiper-slide.index__gallery-slide.js--modal(data-way="gallery-prev.png;gallery-prev1.png;gallery-prev1.png", data-description="Осуждение Фауста",)
+            .row
+              .col--img
+                img(src="./images/gallery-slide.png", alt="")
+                .prev
+                  .title.title--inter30-16 05.12.
+                  .title.title--regal40-20 Осуждение Фауста
+              .col.prev-n
                 .title.title--inter30-16 05.12.
-                .title.title--regal40-20 Осуждение Фауста
-            .col.prev-n
-              .title.title--inter30-16 05.12.
-              .title.title--regal40-20 Осуждение
-                br
-                | Фауста
-        .swiper-slide.index__gallery-slide.js--modal(data-way="gallery-prev.png;gallery-prev1.png;gallery-prev1.png", data-description="Осуждение Фауста",)
-          .row
-            .col--img
-              img(src="./images/gallery-slide.png", alt="")
-              .prev
-                .title.title--inter30-16 05.12.
-                .title.title--regal40-20 Осуждение Фауста
-            .col.prev-n
-              .title.title--inter30-16 05.12.
-              .title.title--regal40-20 Осуждение
-                br
-                | Фауста
-        .swiper-slide.index__gallery-slide.js--modal(data-way="gallery-prev.png;gallery-prev1.png;gallery-prev1.png", data-description="Осуждение Фауста",)
-          .row
-            .col--img
-              img(src="./images/gallery-slide.png", alt="")
-              .prev
-                .title.title--inter30-16 05.12.
-                .title.title--regal40-20 Осуждение Фауста
-            .col.prev-n
-              .title.title--inter30-16 05.12.
-              .title.title--regal40-20 Осуждение
-                br
-                | Фауста
+                .title.title--regal40-20.index__gallery-slide-title Осуждение
+                  br
+                  | Фауста
   .index__note
     .content
       .index__note-conteiner(data-aos='fade-up')
