@@ -71,6 +71,9 @@ function parallax() {
     $('.index__start-phone').css({
       'transform': 'translate(-50%, ' + ( -50 + scroll / 80) + '%)'
     });
+    $('.index__start-title').css({
+      'transform': 'translate(0%, ' +  - scroll / -7.5 + '%)'
+    });
   });
 }
 
