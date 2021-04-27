@@ -304,10 +304,20 @@ function gallery() {
   });
 }
 
+function getSlidesPerView() {
+  if ($(window).width() >= 1680) {
+    return 4;
+  }
+  if ($(window).width() >= 768) {
+    return 3;
+  }
+  return 2;
+}
+
 function mediaSlider() {
   var institSlide = new Swiper('.index__media-conteiner', {
-    slidesPerView: 'auto',
-    centerSlides: true,
+    slidesPerView: getSlidesPerView(),
+    // centerSlides: true,
     autoHeight: true,
     navigation: {
       nextEl: '.media-prev',
