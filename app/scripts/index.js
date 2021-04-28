@@ -317,7 +317,7 @@ function getSlidesPerView() {
 function mediaSlider() {
   var institSlide = new Swiper('.index__media-conteiner', {
     slidesPerView: getSlidesPerView(),
-    // centerSlides: true,
+    centerSlides: true,
     autoHeight: true,
     navigation: {
       nextEl: '.media-prev',
