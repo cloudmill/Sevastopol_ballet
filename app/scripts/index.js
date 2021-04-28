@@ -311,7 +311,10 @@ function getSlidesPerView() {
   if ($(window).width() >= 768) {
     return 3;
   }
-  return 2;
+  if ($(window).width() >= 430) {
+    return 2;
+  }
+  return 1;
 }
 
 function mediaSlider() {
