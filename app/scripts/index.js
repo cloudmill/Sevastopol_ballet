@@ -68,9 +68,15 @@ function parallax() {
     $('.parallax').css({
       'transform': 'translate(0%, ' + - scroll / 5 + '%)'
     });
-    $('.index__start-phone').css({
-      'transform': 'translate(-50%, ' + (-50 + scroll / 80) + '%)'
-    });
+    if ($(window).width() > 550) {
+      $('.index__start-phone').css({
+        'transform': 'translate(-50%, ' + (-50 + scroll / 80) + '%)'
+      });
+    } else {
+      $('.index__start-phone').css({
+        'transform': 'translate(-50%, ' + (scroll / 80) + '%)'
+      });
+    }
     $('.index__start-title').css({
       'transform': 'translate(0%, ' + - scroll / -7.5 + '%)'
     });
@@ -200,7 +206,7 @@ function indexSlider() {
       },
       progress: function () {
         const swiper = this;
-        for (let i = 0; i < swiper.slides.length; i++) {
+        for (let i = 0;i < swiper.slides.length;i++) {
           const slideProgress = swiper.slides[i].progress;
           const innerOffset = swiper.width * 0.5;
           const innerTranslate = slideProgress * innerOffset;
@@ -211,13 +217,13 @@ function indexSlider() {
       },
       touchStart: function () {
         const swiper = this;
-        for (let i = 0; i < swiper.slides.length; i++) {
+        for (let i = 0;i < swiper.slides.length;i++) {
           swiper.slides[i].style.transition = '';
         }
       },
       setTransition: function (speed) {
         const swiper = this;
-        for (let i = 0; i < swiper.slides.length; i++) {
+        for (let i = 0;i < swiper.slides.length;i++) {
           swiper.slides[i].style.transition = speed + 'ms';
           swiper.slides[i].querySelector('.slide-bgimg').style.transition = speed + 'ms';
         }
@@ -250,7 +256,7 @@ function institSlider() {
       },
       progress: function () {
         const swiper = this;
-        for (let i = 0; i < swiper.slides.length; i++) {
+        for (let i = 0;i < swiper.slides.length;i++) {
           const slideProgress = swiper.slides[i].progress;
           const innerOffset = swiper.width * 0.5;
           const innerTranslate = slideProgress * innerOffset;
@@ -261,13 +267,13 @@ function institSlider() {
       },
       touchStart: function () {
         const swiper = this;
-        for (let i = 0; i < swiper.slides.length; i++) {
+        for (let i = 0;i < swiper.slides.length;i++) {
           swiper.slides[i].style.transition = '';
         }
       },
       setTransition: function (speed) {
         const swiper = this;
-        for (let i = 0; i < swiper.slides.length; i++) {
+        for (let i = 0;i < swiper.slides.length;i++) {
           swiper.slides[i].style.transition = speed + 'ms';
           swiper.slides[i].querySelector('.slide-bgimg').style.transition = speed + 'ms';
         }
@@ -351,7 +357,7 @@ function performSlider() {
       },
       progress: function () {
         const swiper = this;
-        for (let i = 0; i < swiper.slides.length; i++) {
+        for (let i = 0;i < swiper.slides.length;i++) {
           const slideProgress = swiper.slides[i].progress;
           const innerOffset = swiper.width * 0.5;
           const innerTranslate = slideProgress * innerOffset;
@@ -362,13 +368,13 @@ function performSlider() {
       },
       touchStart: function () {
         const swiper = this;
-        for (let i = 0; i < swiper.slides.length; i++) {
+        for (let i = 0;i < swiper.slides.length;i++) {
           swiper.slides[i].style.transition = '';
         }
       },
       setTransition: function (speed) {
         const swiper = this;
-        for (let i = 0; i < swiper.slides.length; i++) {
+        for (let i = 0;i < swiper.slides.length;i++) {
           swiper.slides[i].style.transition = speed + 'ms';
           swiper.slides[i].querySelector('.slide-bgimg').style.transition = speed + 'ms';
         }
@@ -578,7 +584,7 @@ function configGallery() {
       $('.bottom').empty();
     }
 
-    for (let i = 0; i < arrayWays.length; i++) {
+    for (let i = 0;i < arrayWays.length;i++) {
       $('.modal').find('.top').append(`<div class="swiper-slide gallery-top-slide"> <div class="img-contein"> <img src="${arrayWays[i]}"/> </div> <p class="text text--regal24-14">${description}</p> </div>`);
       $('.modal').find('.bottom').append(`<div class="swiper-slide"> <div class="find"></div> <img src="${arrayWays[i]}"/> </div>`);
     }

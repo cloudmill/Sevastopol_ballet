@@ -2,7 +2,7 @@
   
   &__start {
     position: relative;
-    height: 868px;
+    height: 900px;
     padding: 167px 60px 50px;
     // background-image: url('../images/start-fon.png');
     background-position: center;
@@ -19,10 +19,11 @@
       padding-top: 110px;
     }
     @media (max-width:768px) {
-      height: 640px;
+      height: 650px;
     }
     @media (max-width:550px) {
       padding-top: 123px;
+      height: 380px;
     }
 
     &-phone {
@@ -43,7 +44,7 @@
       @media (max-width: 768px){
         display: block;
       }
-      @media (max-width: 375px){
+      @media (max-width: 550px){
         display: none;
       }
     }
@@ -52,6 +53,20 @@
       max-width: 375px;
       @media (max-width: 375px){
         display: block;
+      }
+      @media (max-width: 550px) {
+        display: none;
+      }
+    }
+    .mobile {
+      top: auto;
+      bottom: 0;
+      transform: translateX(-50%);
+
+      width: 100%;
+      min-width: 385px;
+      @media (min-width: 551px) {
+        display: none;
       }
     }
    
@@ -114,6 +129,10 @@
           display: none;
         }
       }
+    }
+    @media (max-width: 550px) {
+      margin-top: -15px;
+      padding-top: 0;
     }
   }
 
